@@ -1,6 +1,6 @@
 
 
-import { TestLogin } from "../../Pages_Practice/loginPage";
+import { TestLogin } from "../Utility/loginPage";
 import { assert } from "chai";
 
 const loginPage=new TestLogin()
