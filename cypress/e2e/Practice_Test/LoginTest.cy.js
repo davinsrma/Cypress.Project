@@ -35,7 +35,7 @@ describe('Login feature check with valid and Invalid credential',function(){
         loginPage.enterPassword('Password123')
         loginPage.clickSubmit()
         
-        cy.get('#error').should('have.text', 'Your username is invalid!')
+        cy.get('#error').should('have.text', 'Your username is invalidd!')
 
 
         
