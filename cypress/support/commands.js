@@ -26,3 +26,4 @@
 import 'cypress-file-upload';
 require('cypress-downloadfile/lib/downloadFileCommand')
 require('cypress-plugin-tab')
+///<reference types="Cypress"/>

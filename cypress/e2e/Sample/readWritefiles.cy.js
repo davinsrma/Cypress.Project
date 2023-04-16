@@ -13,9 +13,9 @@ it('Read Files with the help of fixture funtion',function(){
 })
 
 it('Write data to file',function(){
-    cy.writeFile('./cypress/files/writeData.txt','Hello My name is Davinder Sharma\n',{flag:'a+'})
-    cy.writeFile('./cypress/files/writeData.txt','Hello My name is Davinder Sharma\n',{flag:'a+'})
-    cy.writeFile('./cypress/files/writeData.txt','Hello My name is Davinder Sharma\n',{flag:'a+'})
+    cy.writeFile('./cypress/fixtures/writeData.txt','Hello My name is Davinder Sharma\n',{flag:'a+'})
+    cy.writeFile('./cypress/fixtures/writeData.txt','Hello My name is Davinder Sharma\n',{flag:'a+'})
+    cy.writeFile('./cypress/fixtures/writeData.txt','Hello My name is Davinder Sharma\n',{flag:'a+'})
 
 })
 })
