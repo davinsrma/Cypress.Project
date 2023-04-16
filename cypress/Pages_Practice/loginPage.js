@@ -2,7 +2,7 @@ export class TestLogin{
     userName_loc= '#username'
     password_Loc= '#password'
     clickButton= '#submit'
-    errorMsg='#error'
+  
 
     enterUsername(username){
         cy.get(this.userName_loc).type(username)
@@ -16,8 +16,5 @@ export class TestLogin{
         cy.get(this.clickButton).click()
 
     }
-    getErrorMsg(msg){
-        cy.get('#error').should('have.text',msg)
-
-    }
+   
 }

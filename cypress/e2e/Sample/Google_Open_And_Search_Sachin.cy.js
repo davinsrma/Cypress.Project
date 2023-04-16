@@ -1,7 +1,7 @@
  /// <reference types="cypress" />
 
 
-
+describe('This test is for open google and search Sachin and Validate',()=>{
 
 
   it('Google Search', () => {
@@ -15,7 +15,7 @@
     cy.contains('Sachin Tendulkar').should('contain','Sachin Tendulkar')
 
 
-    
+  })
 
 
 

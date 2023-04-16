@@ -1,5 +1,6 @@
 /// <reference types="Cypress"/>
 
+describe('This test is for file upload and file download',()=>{
 
 
 it('File upload Test',function(){
@@ -10,5 +11,8 @@ it('File upload Test',function(){
 
 it.only('Download a file',function(){
     cy.downloadFile('https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg','mydownloads','example.jpg')
+
+})
+
 
 })
