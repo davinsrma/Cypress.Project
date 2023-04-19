@@ -15,6 +15,7 @@ export class DemoQAHomePage{
     excel_loc='Excel File.doc'
 
 // Below are the methods of DemoQaHomePage
+
     clickElement(){
         cy.get(this.element_loc).scrollIntoView()
         cy.get(this.element_loc).click()
