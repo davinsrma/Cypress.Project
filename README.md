@@ -1,23 +1,19 @@
 # Cypress.Project
 
-
 A sample project for demonstrating how to use Cypress for end-to-end testing.
 
 Prerequisites
 Node.js 14 or higher
-
 npm 7 or higher
 
 Installation
 Clone the repository: git clone https://github.com/davinsrma/Cypress.Project.git
-
 Install dependencies: npm install
 
 Usage
 To run the tests, use the following command:
-
-Copy code
-npm test
+npx cypress open
+npx cypress run
 
 This will start Cypress in interactive mode and display a list of available tests. Click on a test to run it.
 
@@ -27,8 +23,8 @@ Includes sample tests for a login page and a QADemo page test.
 Uses Java-Script for type safety
 
 Demonstrates how to use Cypress fixtures to load test data
-Testing
 
+Testing
 The tests cover the following scenarios:
 
 Logging in with valid credentials
