@@ -12,12 +12,12 @@
   "author": "Davinder Sharma",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.9.0",
     "cypress-downloadfile": "^1.2.3",
     "mochawesome-report-generator": "^6.2.0"
   },
   "devDependencies": {
     "chai": "^4.3.7",
+    "cypress": "^12.10.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.3.0",
     "cypress-plugin-tab": "^1.0.5",
