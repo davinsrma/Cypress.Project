@@ -1,5 +1,5 @@
 
-describe('Multiple Web Elements testing\n1. Registration Form\n2. Check Boxes\n3. Radio Buttons\n4. Drop Down\n5. File Upload', function(){
+describe('Multiple Web Elements testing\n1. Registration Form\n2. Check Boxes\n3. Radio Buttons\n4. Drop Down', function(){
 
     beforeEach('Check box testing', function(){
         cy.visit('https://itera-qa.azurewebsites.net/home/automation')
@@ -49,11 +49,43 @@ describe('Multiple Web Elements testing\n1. Registration Form\n2. Check Boxes\n3
                 cy.get('#saturday').should('be.visible').uncheck().and('not.be.checked') 
                 cy.get('#sunday').should('be.visible').uncheck().and('not.be.checked')    
             })
+            it('Multiple Check box clicked and Unclicked at once',function(){
+                cy.get("input.form-check-input[type='checkbox']").should('be.visible').check().and('be.checked')
+                cy.get("input.form-check-input[type='checkbox']").should('be.visible').uncheck().and('not.be.checked')
+            })
 
 
             
 
         })
+        
+        describe('Validating Drop Down funtionality',()=>{
+            it('Clicking dropdown and selecting Spain and validating',()=>{
+            cy.get('.custom-select').select('Spain').should('contain.text','Spain')
+        })
+    })
+        describe('Click on check-box in Years of experience in test automation',function(){
 
+            it.only('Clicking on all radio button and validating other should not checked',()=>{
+                cy.get("label[for='1year']").should('be.visible').click()
+                cy.get("label[for='2years']").should('be.visible').and('not.be.checked')
+                cy.get("label[for='3years']").should('be.visible').and('not.be.checked')
+                cy.get("label[for='4years']").should('be.visible').and('not.be.checked')
 
-})  
+                cy.get("label[for='2years']").should('be.visible').click()
+                cy.get("label[for='1year']").should('be.visible').and('not.be.checked')
+                cy.get("label[for='3years']").should('be.visible').and('not.be.checked')
+                cy.get("label[for='4years']").should('be.visible').and('not.be.checked')
+
+                cy.get("label[for='3years']").should('be.visible').click()
+                cy.get("label[for='2years']").should('be.visible').and('not.be.checked')
+                cy.get("label[for='1year']").should('be.visible').and('not.be.checked')
+                cy.get("label[for='4years']").should('be.visible').and('not.be.checked')
+
+                cy.get("label[for='4years']").should('be.visible').click()
+                cy.get("label[for='2years']").should('be.visible').and('not.be.checked')
+                cy.get("label[for='3years']").should('be.visible').and('not.be.checked')
+                cy.get("label[for='1year']").should('be.visible').and('not.be.checked')
+            })
+        })
+})
