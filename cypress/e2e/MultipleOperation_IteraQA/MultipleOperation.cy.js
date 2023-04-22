@@ -16,7 +16,7 @@ describe('Multiple Web Elements testing\n1. Registration Form\n2. Check Boxes\n3
 
         })
 
-
+        
         describe('Validating checkboxes are working',()=>{
          it('Click on Female Check Box and Verify',function(){
          cy.get('#female').should('be.visible').check()
@@ -66,7 +66,7 @@ describe('Multiple Web Elements testing\n1. Registration Form\n2. Check Boxes\n3
     })
         describe('Click on check-box in Years of experience in test automation',function(){
 
-            it.only('Clicking on all radio button and validating other should not checked',()=>{
+            it('Clicking on all radio button and validating other should not checked',()=>{
                 cy.get("label[for='1year']").should('be.visible').click()
                 cy.get("label[for='2years']").should('be.visible').and('not.be.checked')
                 cy.get("label[for='3years']").should('be.visible').and('not.be.checked')
