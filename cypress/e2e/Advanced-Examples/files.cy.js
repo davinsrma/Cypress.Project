@@ -2,18 +2,18 @@
 
 /// JSON fixture file can be loaded directly using
 // the built-in JavaScript bundler
-const requiredExample = require('../../fixtures/example')
+const requiredExample = require('../../fixtures/inputData')
 
 context('Files', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/commands/files')
+    cy.visit('https://example.cypress.io/commands/files')
 
     // load example.json fixture file and store
     // in the test context object
-    cy.fixture('example.json').as('example')
+    cy.fixture('inputData.json').as('inputData')
   })
 
-  it('cy.fixture() - load a fixture', () => {
+  it.skip('cy.fixture() - load a fixture', () => {
     // https://on.cypress.io/fixture
 
     // Instead of writing a response inline you can
@@ -21,7 +21,7 @@ context('Files', () => {
 
     // when application makes an Ajax request matching "GET **/comments/*"
     // Cypress will intercept it and reply with the object in `example.json` fixture
-    cy.intercept('GET', '**/comments/*', { fixture: 'example.json' }).as('getComment')
+    cy.intercept('GET', '**/comments/*', { fixture: 'inputData.json' }).as('getComment')
 
     // we have code that gets a comment when
     // the button is clicked in scripts.js
@@ -32,7 +32,7 @@ context('Files', () => {
       .and('include', 'Using fixtures to represent data')
   })
 
-  it('cy.fixture() or require - load a fixture', function () {
+  it.skip('cy.fixture() or require - load a fixture', function () {
     // we are inside the "function () { ... }"
     // callback and can use test context object "this"
     // "this.example" was loaded in "beforeEach" function callback
