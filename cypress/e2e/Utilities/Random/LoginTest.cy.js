@@ -1,8 +1,11 @@
 
 
-import { TestLogin } from "../Utility/loginPage";
-import { assert } from "chai";
+// import { TestLogin } from "../Utility/Random/loginPage";
 
+import { TestLogin } from "./loginPage"
+
+
+// const loginPage=new TestLogin()
 const loginPage=new TestLogin()
 
 
@@ -35,7 +38,7 @@ describe('Login feature check with valid and Invalid credential',function(){
         loginPage.enterPassword('Password123')
         loginPage.clickSubmit()
         
-        cy.get('#error').should('have.text', 'Your username is invalidd!')
+        cy.get('#error').should('have.text', 'Your username is invalid!')
 
 
         

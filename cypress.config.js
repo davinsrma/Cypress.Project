@@ -1,5 +1,4 @@
 const { defineConfig } = require('cypress');
-
 const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
 
 module.exports = defineConfig({
@@ -13,14 +12,12 @@ module.exports = defineConfig({
     overwrite: false,
     json: true,
     html: false,
-   
-
   },
 
   e2e: {
 
     watchForFileChanges:false,
-    // defaultCommandTimeout:4000,
+    defaultCommandTimeout:4000,
 
     setupNodeEvents(on, config) {
     on('task', {downloadFile}),

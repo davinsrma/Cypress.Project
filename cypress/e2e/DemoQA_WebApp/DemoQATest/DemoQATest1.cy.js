@@ -2,7 +2,8 @@
 
 import { DemoQAHomePage } from "../DemoQAPages/DemoQAHomePage"
 
-const demoQAHomePage=new DemoQAHomePage()
+
+    const demoQAHomePage=new DemoQAHomePage()
 
 describe('Open DemoQA Home Page And Verify All Element options',function(){
     before(()=>{{
@@ -17,7 +18,7 @@ describe('Open DemoQA Home Page And Verify All Element options',function(){
         demoQAHomePage.clickElement()
     })
 
-    it.skip('Clicking on Element Button',function(){
+    it('Clicking on Element Button',function(){
         
     demoQAHomePage.clickTextButton()
     cy.get('#userName')

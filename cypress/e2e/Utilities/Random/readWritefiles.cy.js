@@ -4,10 +4,10 @@ describe('This test is to read and Write data to a file',function(){
 
 
 it('Read Files with the help of fixture funtion',function(){
-    cy.fixture('example.json').then((data)=>{
+    cy.fixture('inputData.json').then((data)=>{
         cy.log(data.name)
         cy.log(data.email)
-        cy.log(data.body)
+        cy.log(data.currentAddress)
 
     })
 })

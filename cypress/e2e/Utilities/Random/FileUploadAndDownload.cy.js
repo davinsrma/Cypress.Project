@@ -9,7 +9,7 @@ it('File upload Test',function(){
     cy.get('#myfile').selectFile('/Users/davinder/Desktop/LinkedIn Post/3.jpg')
 })
 
-it.only('Download a file',function(){
+it('Download a file',function(){
     cy.downloadFile('https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg','cypress/downloads','example.jpg')
 
 })
